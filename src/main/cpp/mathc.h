@@ -1,20 +1,20 @@
-static jfloat easeInQuad(jfloat x) {
+static float easeInQuad(float x) {
     return x * x;
 }
 
-static jfloat easeOutQuad(jfloat x) {
+static float easeOutQuad(float x) {
     return 1.0 - (1.0 - x) * (1.0 - x);
 }
 
-static jfloat easeInQuart(jfloat x) {
+static float easeInQuart(float x) {
     return x * x * x * x;
 }
 
-static jfloat easeOutQuart(jfloat x) {
+static float easeOutQuart(float x) {
     return 1.0 - powf(1.0 - x, 4.0);
 }
 
-static jfloat easeInExpo(jfloat x) {
+static float easeInExpo(float x) {
     if (x == 0.0) {
         return 1.0;
     } else {
@@ -22,7 +22,7 @@ static jfloat easeInExpo(jfloat x) {
     }
 }
 
-static jfloat easeOutExpo(jfloat x) {
+static float easeOutExpo(float x) {
     if (x == 1.0) {
         return 1.0;
     } else {
@@ -30,19 +30,19 @@ static jfloat easeOutExpo(jfloat x) {
     }
 }
 
-static jfloat easeInCubic(jfloat x) {
+static float easeInCubic(float x) {
     return x * x * x;
 }
 
-static jfloat easeOutCubic(jfloat x) {
+static float easeOutCubic(float x) {
     return 1.0 - powf(1.0 - x, 3.0);
 }
 
-static jfloat easeOutBounce(jfloat x) {
-    jfloat n1 = 7.5625f;
-    jfloat d1 = 2.75f;
+static float easeOutBounce(float x) {
+    float n1 = 7.5625f;
+    float d1 = 2.75f;
 
-    jfloat factor;
+    float factor;
     if (x < 1.0 / d1) {
         factor = n1 * x * x;
     } else if (x < 2.0 / d1) {
@@ -56,6 +56,6 @@ static jfloat easeOutBounce(jfloat x) {
     return factor;
 }
 
-static jfloat easeInBounce(jfloat x) {
+static float easeInBounce(float x) {
     return easeOutBounce(1.0 - x);
 }

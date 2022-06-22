@@ -16,14 +16,3 @@ object MathC {
     external fun easeInBounce(x: Float): Float
     external fun easeOutBounce(x: Float): Float
 }
-
-object AudioVisualization {
-    external fun calculateBottomSpace(
-        x: Float,
-        width: Float,
-        bottomLeftCorner: Int,
-        bottomRightCorner: Int,
-        barWidth: Float,
-        barHeight: Float
-    ): Float
-}
